@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Carter.Benchmarks.AddCarterBenchmarks-20191111-205328</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.12.0, OS=manjaro 
+Intel Xeon E-2176M CPU 2.70GHz, 1 CPU, 12 logical and 6 physical cores
+.NET Core SDK=2.2.402
+  [Host]     : .NET Core 2.2.7 (CoreCLR 4.6.28008.02, CoreFX 4.6.28008.03), X64 RyuJIT
+  Job-ALLLSG : .NET Core 2.2.7 (CoreCLR 4.6.28008.02, CoreFX 4.6.28008.03), X64 RyuJIT
+</code></pre>
+<pre><code>IterationTime=250.0000 ms  MaxIterationCount=20  WarmupCount=1  
+</code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Mean</th><th>Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>AddCarter</td><td>3.037 ms</td><td>0.0110 ms</td><td>0.0102 ms</td>
+</tr></tbody></table>
+</body>
+</html>

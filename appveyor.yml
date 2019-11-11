@@ -36,3 +36,4 @@ skip_branch_with_pr: true
 test_script: 
   - dotnet test test/Carter.Tests
   - dotnet test test/Carter.Samples.Tests
+  - dotnet run -p benchmarks/Carter.Benchmarks -- -f '*'

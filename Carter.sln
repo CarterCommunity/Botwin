@@ -16,9 +16,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carter.Tests", "test\Carter.Tests\Carter.Tests.csproj", "{32E3C950-F6C1-4635-B87F-0EA30044E2F4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "template", "template", "{47344C99-29DA-410E-AFC2-8FD3BA6727DB}"
-ProjectSection(SolutionItems) = preProject
-	template\CarterTemplate.nuspec = template\CarterTemplate.nuspec
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		template\CarterTemplate.nuspec = template\CarterTemplate.nuspec
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarterTemplate", "template\content\CarterTemplate.csproj", "{572762BB-5DFF-425F-8F66-500B973DBB0E}"
 EndProject
@@ -29,6 +29,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidatorOnlyProject", "samples\ValidatorOnlyProject\ValidatorOnlyProject.csproj", "{E5D99119-96EB-4C01-9EC2-A06FC3EEC182}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleSDKClient", "samples\SampleSDKClient\SampleSDKClient.csproj", "{A4ACBFCD-7B56-4FDB-809B-6FD26985A836}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "benchmarks", "benchmarks", "{F27863E9-49B4-4DE1-85C6-BFFB4457B4D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carter.Benchmarks", "benchmarks\Carter.Benchmarks\Carter.Benchmarks.csproj", "{A7642860-FB46-4222-94A4-85D7A9E5FE5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -136,6 +140,18 @@ Global
 		{A4ACBFCD-7B56-4FDB-809B-6FD26985A836}.Release|x64.Build.0 = Release|Any CPU
 		{A4ACBFCD-7B56-4FDB-809B-6FD26985A836}.Release|x86.ActiveCfg = Release|Any CPU
 		{A4ACBFCD-7B56-4FDB-809B-6FD26985A836}.Release|x86.Build.0 = Release|Any CPU
+		{A7642860-FB46-4222-94A4-85D7A9E5FE5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7642860-FB46-4222-94A4-85D7A9E5FE5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7642860-FB46-4222-94A4-85D7A9E5FE5F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A7642860-FB46-4222-94A4-85D7A9E5FE5F}.Debug|x64.Build.0 = Debug|Any CPU
+		{A7642860-FB46-4222-94A4-85D7A9E5FE5F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A7642860-FB46-4222-94A4-85D7A9E5FE5F}.Debug|x86.Build.0 = Debug|Any CPU
+		{A7642860-FB46-4222-94A4-85D7A9E5FE5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7642860-FB46-4222-94A4-85D7A9E5FE5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7642860-FB46-4222-94A4-85D7A9E5FE5F}.Release|x64.ActiveCfg = Release|Any CPU
+		{A7642860-FB46-4222-94A4-85D7A9E5FE5F}.Release|x64.Build.0 = Release|Any CPU
+		{A7642860-FB46-4222-94A4-85D7A9E5FE5F}.Release|x86.ActiveCfg = Release|Any CPU
+		{A7642860-FB46-4222-94A4-85D7A9E5FE5F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -149,6 +165,7 @@ Global
 		{CE26885C-BB25-4A2C-B550-1D807CD1A066} = {35DE35A0-758D-4FDD-BDA3-67F04F65677D}
 		{E5D99119-96EB-4C01-9EC2-A06FC3EEC182} = {35DE35A0-758D-4FDD-BDA3-67F04F65677D}
 		{A4ACBFCD-7B56-4FDB-809B-6FD26985A836} = {35DE35A0-758D-4FDD-BDA3-67F04F65677D}
+		{A7642860-FB46-4222-94A4-85D7A9E5FE5F} = {F27863E9-49B4-4DE1-85C6-BFFB4457B4D1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9096DE78-6327-48BA-AE0E-336F769681A7}
