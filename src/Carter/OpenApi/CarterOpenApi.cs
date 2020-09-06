@@ -19,7 +19,7 @@ namespace Carter.OpenApi
 
     internal static class CarterOpenApi
     {
-        internal static RequestDelegate BuildOpenApiResponse(CarterOptions options, Dictionary<(string verb, string path), RouteMetaData> metaDatas)
+        internal static RequestDelegate BuildOpenApiResponse(CarterOptions options, Dictionary<(string verb, string path), IRouteMetaData> metaDatas)
         {
             return context =>
             {
@@ -53,7 +53,7 @@ namespace Carter.OpenApi
         /// </summary>
         /// <param name="metaDatas">Input information read from definitions and meta data classes.</param>
         /// <returns>A map that contains unique SchemaElements.  These SchemaElements may reference each other.  The keys of the map are the unique long names.</returns>
-        private static Dictionary<string, SchemaElement> ReadSchemaInformation(Dictionary<(string verb, string path), RouteMetaData> metaDatas)
+        private static Dictionary<string, SchemaElement> ReadSchemaInformation(Dictionary<(string verb, string path), IRouteMetaData> metaDatas)
         {
             var navigation = new Dictionary<string, SchemaElement>();
             foreach (var routeMetaData in metaDatas)
@@ -468,7 +468,7 @@ namespace Carter.OpenApi
         /// <param name="metaDatas"></param>
         /// <param name="document">The OpenApiDocument that the path information will be written into.</param>
         /// <param name="context">The HttpContext.</param>
-        private static void AddPaths(Dictionary<string, SchemaElement> navigation, Dictionary<(string verb, string path), RouteMetaData> metaDatas, OpenApiDocument document, HttpContext context)
+        private static void AddPaths(Dictionary<string, SchemaElement> navigation, Dictionary<(string verb, string path), IRouteMetaData> metaDatas, OpenApiDocument document, HttpContext context)
         {
             foreach (var routeMetaData in metaDatas.GroupBy(pair => pair.Key.path))
             {
@@ -584,7 +584,7 @@ namespace Carter.OpenApi
             }
         }
 
-        private static void CreateOpenApiResponseBody(Dictionary<string, SchemaElement> navigation, OpenApiDocument document, KeyValuePair<(string verb, string path), RouteMetaData> methodRoute, OpenApiOperation operation)
+        private static void CreateOpenApiResponseBody(Dictionary<string, SchemaElement> navigation, OpenApiDocument document, KeyValuePair<(string verb, string path), IRouteMetaData> methodRoute, OpenApiOperation operation)
         {
             if (methodRoute.Value.Responses == null)
             {
@@ -601,7 +601,7 @@ namespace Carter.OpenApi
             }
         }
 
-        private static void CreateOpenApiRequestBody(Dictionary<string, SchemaElement> navigation, OpenApiDocument document, KeyValuePair<(string verb, string path), RouteMetaData> keyValuePair, OpenApiOperation operation, HttpContext context)
+        private static void CreateOpenApiRequestBody(Dictionary<string, SchemaElement> navigation, OpenApiDocument document, KeyValuePair<(string verb, string path), IRouteMetaData> keyValuePair, OpenApiOperation operation, HttpContext context)
         {
             if (keyValuePair.Key.verb == "GET")
             {
@@ -852,7 +852,7 @@ namespace Carter.OpenApi
             return inputString.Substring(0, 1).ToUpper() + inputString.Substring(1);
         }
 
-        private static OperationType CreateOpenApiOperationVerb(KeyValuePair<(string verb, string path), RouteMetaData> methodRoute)
+        private static OperationType CreateOpenApiOperationVerb(KeyValuePair<(string verb, string path), IRouteMetaData> methodRoute)
         {
             switch (methodRoute.Key.verb)
             {

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2002
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carter", "src\Carter\Carter.csproj", "{A6D020CF-1722-4AB3-A8B3-69F54319AD6A}"
 EndProject
@@ -16,19 +16,19 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carter.Tests", "test\Carter.Tests\Carter.Tests.csproj", "{32E3C950-F6C1-4635-B87F-0EA30044E2F4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "template", "template", "{47344C99-29DA-410E-AFC2-8FD3BA6727DB}"
-ProjectSection(SolutionItems) = preProject
-	template\CarterTemplate.nuspec = template\CarterTemplate.nuspec
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		template\CarterTemplate.nuspec = template\CarterTemplate.nuspec
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarterTemplate", "template\content\CarterTemplate.csproj", "{572762BB-5DFF-425F-8F66-500B973DBB0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carter.Samples.Tests", "test\Carter.Samples.Tests\Carter.Samples.Tests.csproj", "{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Carter.Samples.Tests", "test\Carter.Samples.Tests\Carter.Samples.Tests.csproj", "{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarterAndMVC", "samples\CarterAndMVC\CarterAndMVC.csproj", "{CE26885C-BB25-4A2C-B550-1D807CD1A066}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarterAndMVC", "samples\CarterAndMVC\CarterAndMVC.csproj", "{CE26885C-BB25-4A2C-B550-1D807CD1A066}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidatorOnlyProject", "samples\ValidatorOnlyProject\ValidatorOnlyProject.csproj", "{E5D99119-96EB-4C01-9EC2-A06FC3EEC182}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidatorOnlyProject", "samples\ValidatorOnlyProject\ValidatorOnlyProject.csproj", "{E5D99119-96EB-4C01-9EC2-A06FC3EEC182}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleSDKClient", "samples\SampleSDKClient\SampleSDKClient.csproj", "{A4ACBFCD-7B56-4FDB-809B-6FD26985A836}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleSDKClient", "samples\SampleSDKClient\SampleSDKClient.csproj", "{A4ACBFCD-7B56-4FDB-809B-6FD26985A836}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -90,16 +90,16 @@ Global
 		{572762BB-5DFF-425F-8F66-500B973DBB0E}.Release|x86.Build.0 = Release|Any CPU
 		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Debug|x64.ActiveCfg = Debug|x64
-		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Debug|x64.Build.0 = Debug|x64
-		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Debug|x86.ActiveCfg = Debug|x86
-		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Debug|x86.Build.0 = Debug|x86
+		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Debug|x64.Build.0 = Debug|Any CPU
+		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Debug|x86.Build.0 = Debug|Any CPU
 		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Release|x64.ActiveCfg = Release|x64
-		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Release|x64.Build.0 = Release|x64
-		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Release|x86.ActiveCfg = Release|x86
-		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Release|x86.Build.0 = Release|x86
+		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Release|x64.ActiveCfg = Release|Any CPU
+		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Release|x64.Build.0 = Release|Any CPU
+		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Release|x86.ActiveCfg = Release|Any CPU
+		{DD5E942A-D546-489B-A5E9-8CB42C61BEC1}.Release|x86.Build.0 = Release|Any CPU
 		{CE26885C-BB25-4A2C-B550-1D807CD1A066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CE26885C-BB25-4A2C-B550-1D807CD1A066}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE26885C-BB25-4A2C-B550-1D807CD1A066}.Debug|x64.ActiveCfg = Debug|Any CPU
