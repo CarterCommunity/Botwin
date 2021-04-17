@@ -244,7 +244,7 @@ namespace Carter
         }
 
         /// <summary>
-        /// Declares a route for POST requests
+        /// Declares a route for PUT requests
         /// </summary>
         /// <param name="path">The path for your route</param>
         /// <param name="handler">The handler that is invoked when the route is hit</param>
@@ -256,7 +256,7 @@ namespace Carter
         }
 
         /// <summary>
-        /// Declares a route for POST requests
+        /// Declares a route for PUT requests
         /// </summary>
         /// <param name="path">The path for your route</param>
         /// <param name="handler">The handler that is invoked when the route is hit</param>
@@ -299,7 +299,7 @@ namespace Carter
         }
 
         /// <summary>
-        /// Declares a route for POST requests
+        /// Declares a route for HEAD requests
         /// </summary>
         /// <param name="path">The path for your route</param>
         /// <param name="handler">The handler that is invoked when the route is hit</param>
@@ -311,7 +311,7 @@ namespace Carter
         }
 
         /// <summary>
-        /// Declares a route for POST requests
+        /// Declares a route for HEAD requests
         /// </summary>
         /// <param name="path">The path for your route</param>
         /// <param name="handler">The handler that is invoked when the route is hit</param>
@@ -355,7 +355,7 @@ namespace Carter
         }
 
         /// <summary>
-        /// Declares a route for POST requests
+        /// Declares a route for PATCH requests
         /// </summary>
         /// <param name="path">The path for your route</param>
         /// <param name="handler">The handler that is invoked when the route is hit</param>
@@ -367,7 +367,7 @@ namespace Carter
         }
 
         /// <summary>
-        /// Declares a route for POST requests
+        /// Declares a route for PATCH requests
         /// </summary>
         /// <param name="path">The path for your route</param>
         /// <param name="handler">The handler that is invoked when the route is hit</param>
@@ -409,7 +409,7 @@ namespace Carter
         }
 
         /// <summary>
-        /// Declares a route for POST requests
+        /// Declares a route for OPTIONS requests
         /// </summary>
         /// <param name="path">The path for your route</param>
         /// <param name="handler">The handler that is invoked when the route is hit</param>
@@ -421,7 +421,7 @@ namespace Carter
         }
 
         /// <summary>
-        /// Declares a route for POST requests
+        /// Declares a route for OPTIONS requests
         /// </summary>
         /// <param name="path">The path for your route</param>
         /// <param name="handler">The handler that is invoked when the route is hit</param>
