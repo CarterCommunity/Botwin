@@ -8,18 +8,18 @@
 
     internal static class ConvertExtensions
     {
-        internal static T ConvertTo<T>(this object value, T defaultValue = default)
+        internal static object ConvertTo(this object value, Type type, object defaultValue = default)
         {
             if (value != null)
             {
                 try
                 {
                     var currentType = value.GetType();
-                    var newType = typeof(T);
+                    var newType = type;
 
                     if (currentType.IsAssignableFrom(newType))
                     {
-                        return (T)value;
+                        return value;
                     }
 
                     var stringValue = value as string;
@@ -28,7 +28,7 @@
                     {
                         if (DateTime.TryParse(stringValue, CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal | DateTimeStyles.AssumeUniversal, out var dateResult))
                         {
-                            return (T)(object)dateResult;
+                            return (object)dateResult;
                         }
 
                         return defaultValue;
@@ -40,7 +40,7 @@
 
                         if (converter.CanConvertFrom(typeof(string)))
                         {
-                            return (T)converter.ConvertFromInvariantString(stringValue);
+                            return converter.ConvertFromInvariantString(stringValue);
                         }
 
                         return defaultValue;
@@ -48,7 +48,7 @@
 
                     var underlyingType = Nullable.GetUnderlyingType(newType) ?? newType;
 
-                    return (T)Convert.ChangeType(value, underlyingType, CultureInfo.InvariantCulture);
+                    return Convert.ChangeType(value, underlyingType, CultureInfo.InvariantCulture);
                 }
                 catch
                 {
@@ -57,6 +57,13 @@
             }
 
             return defaultValue;
+        }
+        
+        internal static T ConvertTo<T>(this object value, T defaultValue = default)
+        {
+            var newType = typeof(T);
+            var result = ConvertTo(value, newType, defaultValue);
+            return (T)result;
         }
 
         internal static IEnumerable<T> ConvertMultipleTo<T>(this IEnumerable<string> values)

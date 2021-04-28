@@ -12,7 +12,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.401
+        dotnet-version: 3.1.x
     - name: Build Reason
       run: echo ${{github.ref}} and ${{github.event_name}}
     - name: Build with dotnet

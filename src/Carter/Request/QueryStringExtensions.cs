@@ -17,7 +17,31 @@
         /// <returns>Query parameter value</returns>
         public static T As<T>(this IQueryCollection query, string key, T defaultValue = default)
         {
-            var value = query[key].FirstOrDefault();
+            var vals = query[key];
+            var propertyType = typeof(T);
+
+            if (propertyType.IsArray() || propertyType.IsCollection() || propertyType.IsEnumerable())
+            {
+                var colType = propertyType.GetElementType();
+                if (colType == null)
+                {
+                    colType = propertyType.GetGenericArguments().First();
+                }
+
+                var convertedvalues = new List<object>();
+                foreach (var stringValue in vals)
+                {
+                    var f = stringValue.ConvertTo(colType, defaultValue);
+                    convertedvalues.Add(f);
+                }
+
+                var ll = Array.CreateInstance(colType, convertedvalues.Count);
+                Array.Copy(convertedvalues.ToArray(), ll, convertedvalues.Count);
+
+                return (T)(object)ll;
+            }
+
+            var value = vals.FirstOrDefault();
 
             if (value == null)
             {

@@ -225,6 +225,17 @@
             Assert.Equal(200, (int)response.StatusCode);
             Assert.Contains($"Managed to parse an int {idToTest}", body);
         }
+        
+        [Fact]
+        public async Task Should_return_GET_requests_with_parsed_querystring_with_array_parameter()
+        {
+            var response = await this.httpClient.GetAsync("/querystringarray?id=69&id=70&id=71");
+
+            var body = await response.Content.ReadAsStringAsync();
+
+            Assert.Equal(200, (int)response.StatusCode);
+            Assert.Contains("69,70,71", body);
+        }
 
         [Fact]
         public async Task Should_return_GET_requests_with_parsed_querystring_with_nullable_parameter()

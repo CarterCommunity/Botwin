@@ -31,7 +31,12 @@ namespace Carter.Tests
                 await ctx.Response.WriteAsync($"Managed to parse an int {id}");
             });
 
-            
+            this.Get("/querystringarray", async ctx =>
+            {
+                var id = ctx.Request.Query.As<int[]>("id");
+                var foo = string.Join(",", id);
+                await ctx.Response.WriteAsync(foo);
+            });
 
             this.Get("/nullablequerystring", async ctx =>
             {
